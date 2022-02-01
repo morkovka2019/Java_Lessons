@@ -20,9 +20,9 @@ public class homework_collections {
         }
     }
 
-    public static TreeMap convertListToTreeMap(ArrayList startList, TreeMap map) {
+    public static TreeMap convertListToTreeMap(ArrayList <User> startList, TreeMap map) {
         for (int i = 0; i < startList.size(); i++) {
-            User list = (User) startList.get(i);
+            User list = startList.get(i);
             map.put(list.getLogin(), list.type.getPriority());
         }
         return map;
@@ -43,7 +43,7 @@ public class homework_collections {
     }
 
     public static void main(String[] args) {
-        ArrayList users = new ArrayList();
+        ArrayList <User> users = new ArrayList <> ();
         generateUsersList(2, UserTypes.ADMIN, users);
         generateUsersList(3, UserTypes.AUTHORIZED, users);
         generateUsersList(3, UserTypes.PREMIUM, users);
