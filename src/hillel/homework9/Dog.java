@@ -9,7 +9,7 @@ public class Dog extends Animal implements Pet{
     public void greets() {
         System.out.println("Dog "+ getName() + " says: Woof");
     }
-    public void greets(Object anotherDog) {
+    public void greets(Dog anotherDog) {
         System.out.println("Woooof");
     }
     @Override
