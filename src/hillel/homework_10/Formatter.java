@@ -1,7 +1,5 @@
 package hillel.homework_10;
-
 import hillel.StringsFormater;
-
 import java.io.*;
 
 
@@ -31,7 +29,6 @@ public class Formatter {
         return text;
     }
     public static void writeTextIntoFile(String text, String path) {
-        String textToFile = null;
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
             writer.write(text);
