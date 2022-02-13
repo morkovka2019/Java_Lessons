@@ -9,10 +9,12 @@ public class Formatter {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(path));
             String textFromFile;
+            StringBuilder builder = new StringBuilder();
             while ((textFromFile = reader.readLine()) != null) {
-                text = String.join("", textFromFile);
-                System.out.println(text);
+                builder.append(textFromFile);
             }
+            text = builder.toString();
+//            System.out.println(text);
             reader.close();
         } catch (FileNotFoundException e) {
             System.out.println("ERROR!!! InputText.txt is not found!!!");
